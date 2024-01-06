@@ -13,14 +13,68 @@ header {
   background-image: url('../images/mobile/image-header.jpg');
   background-size: cover;
 }
-header nav {
+header nav .nav-bar {
   width: 324px;
   position: absolute;
   top: 32px;
   left: calc((100vw - 324px) / 2);
 }
-header nav ul {
-  display: none;
+header nav .nav-bar .hamburger{
+  width: 18px;
+  height: 24px;
+  position: absolute;
+  top: 0px;
+  left: calc(100% - 24px);
+}
+header nav .mobile-nav-box-tab {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: calc(82px);
+  left: calc((100vw - 329px) / 2 + 305px);
+  border: 12px solid #FFF;
+  border-top: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+header .mobile-nav-box {
+  background-color: #FFF;
+  height: 305px;
+  width: 329px;
+  position: absolute;
+  left: calc((100vw - 329px) / 2);
+  top: calc(82px + 24px);
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header nav .mobile-nav-box a{
+  font-family: 'Barlow', serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -.14px;
+  line-height: 25px;
+  color: #808397;
+  text-align: center;
+  text-decoration: none;
+}
+header nav .mobile-nav-box .button{
+  height: 56px;
+  width: 140px;
+  background-color: #FBD600;
+  border-radius: 28px;
+  color: #24303E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .mobile-nav-box .button a{
+  font-family: 'Fraunces', serif;
+  color: #24303E;
+  text-transform: uppercase;
+  font-size: 15px;
 }
 header .title {
   font-family: 'Fraunces', serif;
@@ -241,4 +295,7 @@ footer nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.hidden {
+  display: none!important;
 }
