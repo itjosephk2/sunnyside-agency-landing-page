@@ -17,3 +17,6 @@ document.getElementById('hamburger').onclick = function(){
     isMobileNavOpen = false;
   }
 };
+document.getElementById('header-arrow').onclick = function() {
+    window.location.href = '#about';
+};
