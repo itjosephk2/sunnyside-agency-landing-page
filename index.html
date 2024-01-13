@@ -15,11 +15,11 @@
     <nav>
       <div class="nav-bar">
         <img class="logo" src="assets/images/logo.svg" alt="">
-        <div class="hidden">
+        <div class="desktop-nav">
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <div class="contact-button"><a href="#contact">Contact</a></div>
         </div>
         <svg id="hamburger" class="hamburger" width="24" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"/></svg>
       </div>
@@ -28,7 +28,7 @@
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#projects">Projects</a>
-          <div class="button"><a href="#contact">Contact</a></div>
+          <div class="contact-button"><a href="#contact">Contact</a></div>
         </ul>
       </div>
     </nav>
@@ -56,13 +56,13 @@
 
   </section>
   <section id="services">
-    <div class="service-block" style="background-image: url('assets/images/mobile/image-graphic-design.jpg');">
+    <div class="service-block">
       <div class="text-box">
         <h1 style="color: #24554A;">Graphic design</h1>
         <p style="color: #24554A;">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
       </div>
     </div>
-    <div class="service-block" style="background-image: url('assets/images/mobile/image-photography.jpg');">
+    <div class="service-block">
       <div class="text-box">
         <h1 style="color: #052C3B;">Photography</h1>
         <p style="color: #19536C;">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
@@ -71,8 +71,8 @@
     </div>
   </section>
   <section id="projects">
+    <h1 class="title">Client testimonials</h1>
     <div class="client-testimonials">
-      <h1 class="title">Client testimonials</h1>
       <div class="container">
         <img src="assets/images/image-emily.jpg" alt="">
         <p class="review">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
@@ -99,11 +99,17 @@
       </div>
     </div>
   </section>
-  <section class="image-box">
+  <section class="image-box-mobile">
     <img class="image" src="assets/images/mobile/image-gallery-milkbottles.jpg" alt="">
     <img class="image" src="assets/images/mobile/image-gallery-orange.jpg" alt="">
     <img class="image" src="assets/images/mobile/image-gallery-cone.jpg" alt="">
     <img class="image" src="assets/images/mobile/image-gallery-sugar-cubes.jpg" alt="">
+  </section>
+  <section class="image-box-desktop">
+    <img class="image" src="assets/images/desktop/image-gallery-milkbottles.jpg" alt="">
+    <img class="image" src="assets/images/desktop/image-gallery-orange.jpg" alt="">
+    <img class="image" src="assets/images/desktop/image-gallery-cone.jpg" alt="">
+    <img class="image" src="assets/images/desktop/image-gallery-sugarcubes.jpg" alt="">
   </section>
   <footer>
     <div class="container">
@@ -112,7 +118,6 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
       </nav>
       <div class="social-media-box">
         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">

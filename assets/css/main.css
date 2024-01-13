@@ -6,19 +6,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 header {
   height: 538px;
   width: 100%;
   background-image: url('../images/mobile/image-header.jpg');
   background-size: cover;
+  background-position: center;
 }
 header nav .nav-bar {
   width: 324px;
   position: absolute;
   top: 32px;
   left: calc((100vw - 324px) / 2);
+}
+header nav .desktop-nav {
+  display: none;
 }
 header nav .nav-bar .hamburger{
   width: 18px;
@@ -61,7 +65,7 @@ header nav .mobile-nav-box a{
   text-align: center;
   text-decoration: none;
 }
-header nav .mobile-nav-box .button{
+header nav .mobile-nav-box .contact-button{
   height: 56px;
   width: 140px;
   background-color: #FBD600;
@@ -71,7 +75,7 @@ header nav .mobile-nav-box .button{
   justify-content: center;
   align-items: center;
 }
-header nav .mobile-nav-box .button a{
+header nav .mobile-nav-box .contact-button a{
   font-family: 'Fraunces', serif;
   color: #24303E;
   text-transform: uppercase;
@@ -146,11 +150,18 @@ header .arrow {
   background-position: center;
   position: relative;
 }
+#services .service-block:nth-child(1) {
+  background-image: url('../images/mobile/image-graphic-design.jpg');
+}
+#services .service-block:nth-child(2) {
+  background-image: url('../images/mobile/image-photography.jpg');
+}
+
 .text-box {
   position: absolute;
   margin: auto;
   top: 398px;
-  left: calc((100vw - 327px) / 2);
+  left: calc((100% - 327px) / 2);
   width: 327px;
   text-align: center;
   font-family: 'Fraunces', serif;
@@ -170,6 +181,17 @@ header .arrow {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+#projects .title {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #A7AAAD;
+  text-align: center;
+  margin-top: 64px;
 }
 #projects .client-testimonials {
   height: 1108px;
@@ -179,16 +201,6 @@ header .arrow {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-}
-
-#projects .client-testimonials .title {
-  font-family: 'Fraunces', serif;
-  font-size: 16px;
-  font-weight: 900;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #A7AAAD;
-  text-align: center;
 }
 #projects .client-testimonials .container {
   display: flex;
@@ -244,7 +256,10 @@ header .arrow {
   color: #A7AAAD;
   text-align: center;
 }
-.image-box {
+.image-box-desktop {
+  display: none;
+}
+.image-box-mobile {
   width: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -299,4 +314,158 @@ footer nav a {
 }
 .hidden {
   display: none!important;
+}
+@media only screen and (min-width: 1200px) {
+  header {
+    height: 800px;
+    width: 100%;
+    background-image: url('../images/desktop/image-header.jpg');
+  }
+  header nav .nav-bar {
+    width: 90%;
+    position: absolute;
+    top: 34px;
+    left: calc(10vw / 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav .nav-bar .hamburger{
+    display: none;
+  }
+  header nav .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 467px;
+    height: 100%;
+  }
+  header nav .desktop-nav a{
+    text-decoration: none;
+    font-family: 'Barlow', serif;
+    font-weight: 600;
+    color: #FFF;
+    font-size: 18px;
+    letter-spacing: -.13px;
+    line-height: 25px;
+  }
+  header nav .desktop-nav .contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 28px;
+    width: 140px;
+    height: 56px;
+  }
+  header nav .desktop-nav .contact-button:hover {
+    background-color: rgba(255, 255, 255, 25.37%);
+    color: #fff;
+    cursor: pointer;
+  }
+  header nav .desktop-nav .contact-button:hover a {
+    color: #fff;
+  }
+  header nav .desktop-nav .contact-button a{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: #24303E;
+    font-size: 15px;
+  }
+  #about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  #about div:nth-child(1) {
+    height: 100%;
+    grid-row: 1;
+    grid-column: 2;
+  }
+  #about div:nth-child(2) {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #about div:nth-child(3) {
+    height: 100%;
+    grid-row:  2;
+    grid-column: 1;
+  }
+  #about div:nth-child(4) {
+    grid-column: 2;
+    grid-column: 2;
+  }
+
+  #about .text-block {
+    width: 100%;
+    height: 437px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #about .text-block h1 {
+    width: 445px;
+    font-size: 40px;
+    letter-spacing: -.29px;
+    text-align: left;
+  }
+  #about .text-block p {
+    width: 445px;
+    text-align: left;
+  }
+  #about .text-block a {
+    width: 445px;
+    text-align: left;
+  }
+  #services {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  #services .service-block:nth-child(1) {
+    background-image: url('../images/desktop/image-graphic-design.jpg');
+  }
+  #services .service-block:nth-child(2) {
+    background-image: url('../images/desktop/image-photography.jpg');
+  }
+  .text-box {
+    left: calc((100% - 339px) / 2);
+    width: 339px;
+    height: 143px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .text-box p {
+    max-height: 81px;
+  }
+  .image-box-desktop {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    height: 447px;
+  }
+  .image-box-mobile {
+    display: none;
+  }
+  #projects .title {
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 160px;
+  }
+  #projects .client-testimonials {
+    height: auto;
+    width: 100vw;
+    margin: 0px;
+    margin-top: 81px;
+    margin-bottom: 160px;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  #projects .client-testimonials .container .review {
+    width: 350px;
+  }
 }
